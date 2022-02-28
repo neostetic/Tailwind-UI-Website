@@ -186,7 +186,7 @@ code {
     margin: 0 10px;
 }
 
-.header > div {
+.header-left {
     float: left;
     margin-bottom: 5px;
 }
@@ -197,14 +197,14 @@ code {
     margin-top: 10px;
 }
 
-.header > div > div > a {
+.header-left > a {
     color: var(--secondary);
-    margin-left: 25px;
+    margin-left: 26px;
     font-weight: 600;
     opacity: .7;
 }
 
-.header > div > div > a:hover {
+.header-left > a:hover {
     opacity: 1;
 }
 
@@ -255,5 +255,9 @@ code {
         width: 100%;
         text-align: center;
         float: left;
+    }
+
+    .header-left > a {
+        margin: 0 6px;
     }
 }
