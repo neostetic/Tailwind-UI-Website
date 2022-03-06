@@ -16,7 +16,7 @@
             <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
             <path d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3.1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2.1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/>
         </svg>
-        <b class="f-24 pl-5">Tailwind UI</b>
+        <span class="f-24 pl-5">Tailwind UI</span>
         <div class="header-left">
             <a href="#home">Domů</a>
             <a href="#menu">Obsah</a>
@@ -26,12 +26,11 @@
     </div>
 </div>
 <div class="content center auto-width">
-    <div id="home" class="w-full">
-        <div class="section"></div>
+    <div id="home" class="section">
         <div class="w-half">
             <div class="f-42">
-                <span class="c-p">Responsivní UI Elementy,</span><br>
-                pocházející z Tailwind CSS
+                <span class="c-p">Vlastní UI Komponenty,</span><br>
+                pomocí Tailwind CSS
             </div>
             <div class="m">
                 <svg class="o-7 c-s h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
@@ -51,150 +50,301 @@
                 <b class="f-14 small-text">VUE</b>
             </div>
             <div class="f-18 m o-7">
-                <b>Tailwind UI</b> používá vnějšího <b>Tailwind CSS</b>, pro výrobu Elementů na různých webových aplikací.
-                Jedná se o knihovnu pomáhajíci vytvářet stránku a aplikace snáze a jednodušeji s menší pomocí od JavaScriptu.<br>
+                <b>Tailwind UI</b> používá vnějšího <a href="https://tailwindcss.com">Tailwind CSS</a>, pro výrobu komponentů na různých webových aplikací. Jedná se o knihovnu pomáhajíci vytvářet stránku snáze v jejím vzhledu.<br>
                 <br>
-                Knihovna se dá dále rozšířit o další komponenty, jako například <b>Headless UI</b> nebo <b>TailwindComponents</b><br>
+                Nativní knihovna pro výrobu <b>Dropdown Menu</b>, <b>Listboxů</b>, ...<br>
             </div>
             <br>
             <a href="#menu">
                 <button>
-                    Pokračovat
+                    Pokračovat na stránce
+                </button>
+            </a>
+            <br>
+            <a href="https://tailwindui.com" target="_blank">
+                <button>
+                    Tailwind UI
                 </button>
             </a>
         </div>
         <div class="w-half text-center pl-20">
-            <img src="res/assets/example_1.png" width="100%"/>
+            <div class="img-zoom hide-img">
+                <img src="res/assets/example_1.png"/>
+            </div>
         </div>
     </div>
-    <div id="menu" class="w-full">
-        <div class="section"></div>
-        <b class="f-28">Obsah</b>
-        <ul class="f-20">
-            <li><a class="c-s" href="#home">Domů</a></li>
-            <li><a class="c-s" href="#menu">Informace</a></li>
-        </ul>
-    </div>
-    <div id="install">
-        <div class="section"></div>
-        <span class="c-p f-32">1. Instalace přes NPM</span><br>
-        <br>
-        <span class="f-18 o-7">
-            <b>Tailwind UI</b> je rozšíření do <b>Tailwind CSS</b>, které umožňuje rychle a snadno vytvořit Webovou aplikaci, pomocí responzivních HTML snippetů (Dropdown Menu, Switch, Popup Dialog, Navbar, ...).<br>
-            <br>
-            Pokud jsme se rozhodli že Tailwind je naše cesta, tak musíme instalovat samotný balíček.<br>
-            <br>
-        </span>
-        <pre><code class="language_npm">
-    npm install tailwindcss@latest
-        </code></pre>
-        <br>
-        <span class="f-18 o-7">
-            CSS styl můžeme také opravovat pomocí Class, jako například u <b>Bootstrap</b> a od toho nám slouží <b>Tailwind CSS</b>, který se stáhl společně s Tailwind UI.<br>
-            <br>
-        </span>
+    <div id="menu" class="section">
+        <div class="c-p f-32">Obsah</div>
+        <ol class="f-18">
+            <li><a class="c-s" href="#info">Co je to Tailwind</a></li>
+            <li><a class="c-s" href="#install">Instalace přes NPM</a></li>
+            <li><a class="c-s" href="#install-react">Využití přes React.js</a></li>
+            <ol>
+                <li><a class="c-s" href="#install-react-tailwind">Instalace Tailwind UI</a></li>
+                <li><a class="c-s" href="#install-react-component">Vytváření komponentů</a></li>
+            </ol>
+            <li><a class="c-s" href="#install-vue">Využití přes VUE.js</a></li>
+            <ol>
+                <li><a class="c-s" href="#install-vue-tailwind">Instalace Tailwind UI</a></li>
+                <li><a class="c-s" href="#install-vue-component">Vytváření komponentů</a></li>
+            </ol>
+
+        </ol>
     </div>
 
-    <div id="install-react">
-        <div class="section"></div>
-        <span class="c-p f-32">1.2. Využití přes React.js</span><br>
-        <br>
-        <span class="f-18 o-7">
-            Tailwind UI do nového projektu jsme již nainstalovaly. Ale jestli chceme do Tailwindu doinstalovat přídavné balíčky, tak jednoduše můžeme přes NPM.<br>
+    <div class="section" id="info">
+        <div class="c-p f-32">1. Co je to Tailwind UI</div>
+        <div class="f-18 o-7">
+            <b>Tailwind UI</b> pochází ze <a href="https://tailwindcss.com">Tailwind CSS</a>, což je takový <b>Bootstrap</b> na steroidech. Oproti <b>Bootstrap</b> své classy nativně tvoří za běhu, pomocí jednoduchých funkcí <i>(například když pozřebujeme velikost fontu přesně 26rem, class se sama vytvoří)</i>. Využívá se jako CSS balíček, který pomáhá vytvářet klíčové komponenty po stránce vzhledové.<br>
             <br>
-            U <b>React.js</b> si například ukážeme <b>Headless UI</b> (slouží k dalším snippetům) a <b>Heroicons</b> (slouží pro ikonky).<br>
+            V našem případě budeme využívat <b>Tailwind UI</b> samotně, ale můžeme ho také využít s další knihovnou. Například <a href="https://headlessui.dev/">Headless UI</a>, která ulehčuje další komponenty potřebné na stránce, jako například Switche, Dropdown Menu, Listboxy a další.<br>
             <br>
-        </span>
-        <pre><code class="language_npm">
-    npm install @headlessui/react @heroicons/react
-        </code></pre>
-        <pre><code class="language_react">
-    const people = [
-      {
-        name: 'Mike Cock',
-        email: 'mike.cock@example.com',
-        image:
-          'path/to/img',
-      },
-      {
-        name: 'Tony Hawk',
-        email: 'tony.hawk@example.com',
-        image:
-          'path/to/img',
-      },
-      {
-        name: 'Ted Fox',
-        email: 'ted.fox@example.com',
-        image:
-          'path/to/img',
-      }
-    ]
-
-    export default function Example() {
-      return (
-        &lt;ul className="divide-y divide-gray-200"&gt;
-          {people.map((person) =&gt; (
-            &lt;li key={person.email} className="py-4 flex"&gt;
-              &lt;img className="h-10 w-10 rounded-full" src={person.image} alt="" /&gt;
-              &lt;div className="ml-3"&gt;
-                &lt;p className="text-sm font-medium text-gray-900"&gt;{person.name}&lt;/p&gt;
-                &lt;p className="text-sm text-gray-500"&gt;{person.email}&lt;/p&gt;
-              &lt;/div&gt;
-            &lt;/li&gt;
-          ))}
-        &lt;/ul&gt;
-      )
-    }
-        </code></pre>
+            Avšak <b>Tailwind UI</b> je rozšíření, které pomáhá tvořít právě UI elementy, pomocí komponentů, společně s <b>Tailwind CSS</b> se urychluje vývoj webových stránek a aplikací.
+        </div>
+        <div class="img-section">
+            <a href="https://dribbble.com/shots/10183487-Tailwind-UI/attachments/2118367?mode=media" target="_blank">
+                <div class="img-zoom h-300">
+                    <img class="blur-on-hover"
+                         src="https://cdn.dribbble.com/users/42578/screenshots/10183487/media/edf0f1553bfb5c8a31e7437a7d474071.png"/>
+                </div>
+                <div class="img-subtext">Tailwind UI by Steve Schoger for Tailwind Labs on Dribbble</div>
+            </a>
+        </div>
     </div>
-    <pre><code class="language_npm">
-    npm install @headlessui/vue @heroicons/vue
-    </code></pre>
 
-    <pre><code class="language_vue">
-    &lt;template&gt;
-      &lt;ul class="divide-y divide-gray-200"&gt;
-        &lt;li v-for="person in people" :key="person.email" class="py-4 flex"&gt;
-          &lt;img class="h-10 w-10 rounded-full" :src="person.image" alt="" /&gt;
-          &lt;div class="ml-3"&gt;
-            &lt;p class="text-sm font-medium text-gray-900"&gt;{{ person.name }}&lt;/p&gt;
-            &lt;p class="text-sm text-gray-500"&gt;{{ person.email }}&lt;/p&gt;
+
+    <div class="section" id="install">
+        <div class="c-p f-32">2. Instalace přes NPM</div>
+        <div class="f-18 o-7">
+            Jen tak rychle jsme si shrnuli co to ten <b>Tailwind UI</b> vlastně je, a abychom jsme mohly ho v Reactu nebo VUE využít, musíme si ho nejprve nainstalovat do našeho nového projektu.
+        </div>
+        <div>
+            <pre><code class="language_npm force-copy">npm install tailwindcss@latest</code></pre>
+        </div>
+        <div class="quotes f-18 o-7">
+            Ještě před tím než se ale vrhneme do programování, pokud nemáte alespoň nějaké znalosti z <b>Bootstrap</b> a nebo ostatních knihoven, doporučuje se naučit alespoň základní znalost class/prefixů. Pro přehled se můžete mrknout do <a href="https://tailwindcss.com/docs/preflight">dokumentace prefixů Tailwind CSS</a>.
+        </div>
+        <div class="f-18 o-7 text-center">
+            Pokračovat na <a href="#install-react">React.js</a> nebo <a href="#install-vue">VUE.js</a>
+        </div>
+    </div>
+
+
+    <div class="section" id="install-react">
+        <div class="c-p f-32">3 Využití přes React.js</div>
+        <div class="c-p f-24" id="install-react-tailwind">3.1. Instalace Tailwind UI</div>
+        <div class="f-18 o-7">
+            Tailwind CSS/UI se nám již nainstaloval. Pokud ale chceme do Tailwindu UI rozšířerní, doinstalujeme přídavné balíčky <a href="https://headlessui.dev/">Headless UI</a> a <a href="https://heroicons.com">Heroicons</a> přes NPM. Pokračujeme jako v minulé sekci a nainstalujeme si balíčky do našeho projektu.
+        </div>
+        <div>
+            <pre><code class="language_npm force-copy">npm install @headlessui/react @heroicons/react</code></pre>
+        </div>
+        <div class="f-18 o-7">
+            <b>Podpora balíčků pouze od verzí React.js 16 a výšší.</b>
+        </div>
+        <br>
+        <div class="c-p f-24" id="install-react-component">3.2 Vytváření komponentů</div>
+        <div class="f-18 o-7">
+            V <b>React.js</b> je každý příklady poskytován jako jedna komponenta. Na stránce <a href="https://headlessui.dev">https://headlessui.dev</a> jsou tyto příklady více rozebírány, ale tady není snad potřeba je rezebírat. Přepokládejme tedy že si chceme vytvořit komponent vlastní.<br>
+            <br>
+            Tyto komponenty se tvoří jen kvůli nepovinné duplicitě a usnadňuje tím běh stránky na uživatelské straně. Nemusí se tím pádem u uživatele počítač stresovat opakovanými elementy.<br>
+            <br>
+            Například řekněme že řešíme list komponentů.
+        </div>
+        <div>
+            <pre><code class="language_react force-copy">const people = [
+  {
+    name: 'Sheldon Cooper',
+    email: 'sheldon.cooper@example.com',
+    image:
+      'path/to/img',
+  },
+  {
+    name: 'Leonard Hofstadter',
+    email: 'leonard.hofstadter@example.com',
+    image:
+      'path/to/img',
+  },
+  {
+    name: 'Howard Wolowitz',
+    email: 'howard,wolowitz@example.com',
+    image:
+      'path/to/img',
+  },
+  {
+    name: 'Rajesh Koothrappali',
+    email: 'rajesh.koothrappali@example.com',
+    image:
+      'path/to/img',
+  }
+]
+
+export default function BigBangTheoryCharacters() {
+  return (
+    &lt;ul className="divide-y divide-gray-200"&gt;
+      {people.map((person) =&gt; (
+        &lt;li key={person.email} className="py-4 flex"&gt;
+          &lt;img className="h-10 w-10 rounded-full" src={person.image} alt="" /&gt;
+          &lt;div className="ml-3"&gt;
+            &lt;p className="text-sm font-medium text-gray-900"&gt;{person.name}&lt;/p&gt;
+            &lt;p className="text-sm text-gray-500"&gt;{person.email}&lt;/p&gt;
           &lt;/div&gt;
         &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/template&gt;
+      ))}
+    &lt;/ul&gt;
+  )
+}</code></pre>
+        </div>
+        <div class="f-18 o-7">
+            Můžeme také dále kód rozdělit na menší části. Poté můžeme různé různě komponenty vyvolávat a míchat mezi sebou. Ulehčuje práci, když jeden a ten samý komponent, potřebujeme také někde jinde.
+        </div>
+        <div>
+            <pre><code class="language_react force-copy">function BigBangTheoryCharacters({ person }) {
+  return (
+    &lt;li className="py-4 flex"&gt;
+      &lt;img className="h-10 w-10 rounded-full" src={person.image} alt="" /&gt;
+      &lt;div className="ml-3"&gt;
+        &lt;p className="text-sm font-medium text-gray-900"&gt;{person.name}&lt;/p&gt;
+        &lt;p className="text-sm text-gray-500"&gt;{person.email}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  )
+}
 
-    &lt;script&gt;
-    const people = [
-      {
-        name: 'Mike Cock',
-        email: 'mike.cock@example.com',
-        image:
-          'path/to/img',
-      },
-      {
-        name: 'Tony Hawk',
-        email: 'tony.hawk@example.com',
-        image:
-          'path/to/img',
-      },
-      {
-        name: 'Ted Fox',
-        email: 'ted.fox@example.com',
-        image:
-          'path/to/img',
-      }
-    ]
+export default function BigBangTheoryCharacters({ people }) {
+  return (
+    &lt;ul className="divide-y divide-gray-200"&gt;
+      {people.map((person) =&gt; &lt;PersonId key={person.id} person={person} /&gt;)}
+    &lt;/ul&gt;
+  )
+}</code></pre>
+        </div>
+        <div class="f-18 o-7">
+            <b>Tailwind UI</b> si můžeme představit jako řadu blueprintů nebo konstant. Není ale povinností takhle kód psát, ale zamyslet se nad tím, kolikrát jednu část kódu využijete.<br>
+            <br>
+            Pokud ale potřebujete určitý komponent <i>(Switch, Dropdown Menu, Tabs, ...)</i>, můžete využít stránku <a href="https://headlessui.dev/">https://headlessui.dev/</a>. Z nabídky si můžete vybrat snippety a upravit si podle potřeby.
+        </div>
+    </div>
 
-    export default {
-      setup() {
-        return {
-          people,
-        }
-      },
+
+    <div class="section" id="install-vue">
+        <div class="c-p f-32">4 Využití přes VUE.js</div>
+        <div class="c-p f-24" id="install-vue-tailwind">4.1. Instalace Tailwind UI</div>
+        <div class="f-18 o-7">
+            Tailwind CSS/UI se nám již nainstaloval. Pokud ale chceme do Tailwindu UI rozšířerní, doinstalujeme přídavné balíčky <a href="https://headlessui.dev/">Headless UI</a> a <a href="https://heroicons.com">Heroicons</a> přes NPM. Pokračujeme jako v minulé sekci a nainstalujeme si balíčky do našeho projektu.
+        </div>
+        <div>
+            <pre><code class="language_npm force-copy">npm install @headlessui/vue @heroicons/vue</code></pre>
+        </div>
+        <div class="f-18 o-7">
+            <b>Podpora balíčků pouze od verzí React.js 16 a výšší.</b>
+        </div>
+        <br>
+        <div class="c-p f-24" id="install-vue-component">4.2 Vytváření komponentů</div>
+        <div class="f-18 o-7">
+            V <b>VUE.js</b> je každý příklady poskytován jako jedna komponenta. Na stránce <a href="https://headlessui.dev">https://headlessui.dev</a> jsou tyto příklady více rozebírány, ale tady není snad potřeba je rezebírat. Přepokládejme tedy že si chceme vytvořit komponent vlastní.<br>
+            <br>
+            Tyto komponenty se tvoří jen kvůli nepovinné duplicitě a usnadňuje tím běh stránky na uživatelské straně. Nemusí se tím pádem u uživatele počítač stresovat opakovanými elementy.<br>
+            <br>
+            Například řekněme že řešíme list komponentů.
+        </div>
+        <div>
+            <pre><code class="language_vue force-copy">&lt;template&gt;
+  &lt;ul class="divide-y divide-gray-200"&gt;
+    &lt;li v-for="person in people" :key="person.email" class="py-4 flex"&gt;
+      &lt;img class="h-10 w-10 rounded-full" :src="person.image" alt="" /&gt;
+      &lt;div class="ml-3"&gt;
+        &lt;p class="text-sm font-medium text-gray-900"&gt;{{ person.name }}&lt;/p&gt;
+        &lt;p class="text-sm text-gray-500"&gt;{{ person.email }}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+const people = [
+  {
+    name: 'Sheldon Cooper',
+    email: 'sheldon.cooper@example.com',
+    image:
+      'path/to/img',
+  },
+  {
+    name: 'Leonard Hofstadter',
+    email: 'leonard.hofstadter@example.com',
+    image:
+      'path/to/img',
+  },
+  {
+    name: 'Howard Wolowitz',
+    email: 'howard,wolowitz@example.com',
+    image:
+      'path/to/img',
+  },
+  {
+    name: 'Rajesh Koothrappali',
+    email: 'rajesh.koothrappali@example.com',
+    image:
+      'path/to/img',
+  }
+]
+
+export default {
+  setup() {
+    return {
+      people,
     }
-    &lt;/script&gt;
-    </code></pre>
+  },
+}
+&lt;/script&gt;</code></pre>
+        </div>
+        <div class="f-18 o-7">
+            Můžeme také dále kód rozdělit na menší části. Poté můžeme různé různě komponenty vyvolávat a míchat mezi sebou. Ulehčuje práci, když jeden a ten samý komponent, potřebujeme také někde jinde.
+        </div>
+        <div>
+            <pre><code class="language_vue force-copy">&lt;!-- HockeyTeamList.vue --&gt;
+&lt;template&gt;
+  &lt;ul class="divide-y divide-gray-200"&gt;
+    &lt;HockeyTeamItem v-for="team in teams" :key="team.id" :team="team"/&gt;
+  &lt;/ul&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    teams: Array
+  },
+}
+&lt;/script&gt;
+
+&lt;!-- HockeyTeamListItem.vue --&gt;
+&lt;template&gt;
+  &lt;li class="py-4 flex"&gt;
+    &lt;img class="h-10 w-10 rounded-full" :src="team.logo" alt="" /&gt;
+    &lt;div class="ml-3"&gt;
+      &lt;p class="text-sm font-medium text-gray-900"&gt;{{ team.name }}&lt;/p&gt;
+      &lt;p class="text-sm text-gray-500"&gt;{{ team.city }}&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    team: Object
+  },
+}
+&lt;/script&gt;</code></pre>
+        </div>
+        <div class="f-18 o-7">
+            <b>Tailwind UI</b> si můžeme představit jako řadu blueprintů nebo konstant. Není ale povinností takhle kód psát, ale zamyslet se nad tím, kolikrát jednu část kódu využijete.<br>
+            <br>
+            Pokud ale potřebujete určitý komponent <i>(Switch, Dropdown Menu, Tabs, ...)</i>, můžete využít stránku <a href="https://headlessui.dev/">https://headlessui.dev/</a>. Z nabídky si můžete vybrat snippety a upravit si podle potřeby.
+        </div>
+    </div>
+</div>
+<div class="footer text-center c-s o-5 f-14">
+    Created by Jan Poláček 2022 ©
 </div>
 <script src="res/js/main.js"></script>
 </body>
