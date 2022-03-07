@@ -54,6 +54,10 @@ a {
     color: var(--primary);
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 img {
     width: 100%;
     -webkit-transition: var(--transition);
@@ -99,11 +103,21 @@ button:active {
     color: var(--primary);
 }
 
-code {
+code, iframe {
     font-family: monospace;
     padding: 20px 30px !important;
-    border-radius: 14px;
+    border-radius: 17px;
     box-shadow: 0 0 20px rgba(0,0,0,.4);
+    transition: var(--transition);
+}
+
+code:hover, iframe:hover {
+    border-radius: 10px;
+}
+
+iframe {
+    height: 420px;
+    border: 0;
 }
 
 .no-copy, br {
@@ -165,6 +179,7 @@ code {
 }
 
 .img-zoom {
+    height: 400px;
     overflow: hidden;
     border-radius: 17px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
@@ -271,6 +286,10 @@ code {
     height: 300px;
 }
 
+.h-420 {
+    height: 420px;
+}
+
 .w-half {
     width: 50%;
     float: left;
@@ -278,7 +297,6 @@ code {
 
 .w-full {
     width: 100%;
-    float: left;
 }
 
 .m {
@@ -299,6 +317,14 @@ code {
 
 .pl-20 {
     padding-left: 20px;
+}
+
+.bg-yellow {
+    background: rgb(255,179,36);
+    background: -moz-linear-gradient(30deg, rgba(255,179,36,1) 0%, rgba(244,249,39,1) 100%);
+    background: -webkit-linear-gradient(30deg, rgba(255,179,36,1) 0%, rgba(244,249,39,1) 100%);
+    background: linear-gradient(30deg, rgba(255,179,36,1) 0%, rgba(244,249,39,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffb324",endColorstr="#f4f927",GradientType=1);
 }
 
 .header {
@@ -364,7 +390,7 @@ ol > li > a:hover {
 }
 
 .footer {
-    margin-top: 20px;
+    margin-top: 120px;
     width: 100%;
     padding: 40px;
     background: rgb(0,0,0);
@@ -401,6 +427,15 @@ ol > li > a:hover {
 
     .hide-img {
         display: none;
+    }
+
+    .img-zoom {
+        height: auto;
+    }
+
+    .blur-on-hover {
+        opacity: 1;
+        filter: blur(0);
     }
 }
 
