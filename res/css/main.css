@@ -407,9 +407,11 @@ ol > li > a:hover {
         padding-top: 60px;
     }
 
-    .content {
-        text-align: center;
-    }
+    /*
+        .content {
+            text-align: center;
+        }
+    */
 
     code {
         text-align: left;
